@@ -1,6 +1,7 @@
-const axios = require('axios').default;
 
-module.exports = function tiny(string) {
+function tiny(string) {
     if (typeof string !== "string") throw new TypeError("Tiny wants a string!");
     return string.replace(/\s/g, "");
 };
+
+module.exports.tiny = tiny;
