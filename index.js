@@ -14,5 +14,7 @@ function tiny(string) {
     return string.replace(/\s/g, "");
 };
 
-exports.tiny = tiny;
-exports.getMockData = getMockData;
+module.exports = {
+    tiny: tiny,
+    getMockData: getMockData,
+};
