@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-function getMockData(){
+const getMockData = () => {
     axios.get("https://tinycall.free.beeceptor.com").then(res => {
         console.log(res);
     }).catch(e => {
@@ -9,12 +9,12 @@ function getMockData(){
     })
 };
 
-function tiny(string) {
+var tiny = (string) => {
     if (typeof string !== "string") throw new TypeError("Tiny wants a string!");
     return string.replace(/\s/g, "");
 };
 
 module.exports = {
-    tiny: tiny,
-    getMockData: getMockData
+    getMockData, 
+    tiny,    
 };
