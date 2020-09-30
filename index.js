@@ -7,7 +7,7 @@ function getMockData(){
     }).catch(e => {
         console.error(e);
     })
-}
+};
 
 function tiny(string) {
     if (typeof string !== "string") throw new TypeError("Tiny wants a string!");
@@ -16,5 +16,5 @@ function tiny(string) {
 
 module.exports = {
     tiny: tiny,
-    getMockData: getMockData,
+    getMockData: getMockData
 };
